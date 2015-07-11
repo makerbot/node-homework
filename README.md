@@ -7,10 +7,10 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 # Install git & node
 brew install git node
 
-# Make new directory and clone this repo
-mkdir ~/node-homework
-cd ~/node-homework
+# clone this repo and enter the directory
+cd ~/
 git clone https://github.com/makerbot/node-homework.git
+cd ~/node-homework
 
 # Install node dependencies
 npm install
