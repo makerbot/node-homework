@@ -8,14 +8,24 @@ var app = require('../');
 
 // test the individual functions
 describe('Unit Tests', function() {
-  it('should return a random string', function(done) {
+  it('randomString should return a random string', function(done) {
     letters.randomString(function(string) {
       string.should.be.a('string').with.length.above(0);
       done();
     });
   });
 
-  it('should reverse the string', function() {
+  it('randomUsername should return a valid username', function(done) {
+    letters.randomUsername(function(name) {
+      name.should.be.a('string')
+        .with.length.above(0)
+        .and.contain('.')
+        .and.not.contain(' ');
+      done();
+    });
+  });
+
+  it('reverseIt should reverse the string', function() {
     var reversed = letters.reverseIt('spilled on server');
     reversed.should.be.a('string').and.equal('revres no dellips');
 
@@ -39,6 +49,20 @@ describe('Integration Tests', function() {
     }, function(err, response, body) {
       if (err) throw err;
       body.reply.should.be.a('string').with.length.above(0);
+      done();
+    });
+  });
+
+  it('"GET /username" should return a valid username', function(done) {
+    request({
+      uri: url + '/username',
+      json: true
+    }, function(err, response, body) {
+      if (err) throw err;
+      body.reply.should.be.a('string')
+        .with.length.above(0)
+        .and.contain('.')
+        .and.not.contain(' ');
       done();
     });
   });

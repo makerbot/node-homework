@@ -7,3 +7,7 @@ exports.reverseIt = function(string) {
 exports.randomString = function(callback) {
   aan('sentence').then(callback);
 };
+
+exports.randomUsername = function(callback) {
+  aan('dot').then(callback);
+};

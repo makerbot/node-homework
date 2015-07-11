@@ -18,6 +18,14 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Routes
+app.get('/username', function(req, res, next) {
+  letters.randomUsername(function(name) {
+    res.json({
+      reply: name
+    });
+  });
+});
+
 app.get('/', function(req, res, next) {
   letters.randomString(function(reversed) {
     res.json({
