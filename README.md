@@ -19,7 +19,7 @@ npm install
 npm test
 ```
 
-To run the server by itself, simply type `npm start`
+To run the server by itself, simply type `npm start`, then you can `curl http://localhost:3000/` to hit an endpoint.
 
 ### Stuff we used
 * [Express](http://expressjs.com/) as the server framework
