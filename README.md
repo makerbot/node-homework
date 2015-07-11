@@ -20,3 +20,8 @@ npm test
 ```
 
 To run the server by itself, simply type `npm start`
+
+### Stuff we used
+* [Express](http://expressjs.com/) as the server framework
+* [Mocha](http://mochajs.org/) as the test runner
+* [Chai](http://chaijs.com/) as the test assertion library
