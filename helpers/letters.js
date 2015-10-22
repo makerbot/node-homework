@@ -1,13 +1,9 @@
-var aan = require('adjective-adjective-animal');
+const sid = require('shortid');
 
-exports.reverseIt = function(string) {
+exports.reverseIt = string => {
   return string.split('').reverse().join('');
 };
 
-exports.randomString = function(callback) {
-  aan('sentence').then(callback);
-};
-
-exports.randomUsername = function(callback) {
-  aan('dot').then(callback);
+exports.randomString = () => {
+  return sid.generate();
 };

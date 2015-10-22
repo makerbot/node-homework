@@ -1,36 +1,26 @@
-var express = require('express');
-var path = require('path');
-var logger = require('morgan');
-var bodyParser = require('body-parser');
-var letters = require('./helpers/letters');
+const express = require('express')
+  , path = require('path')
+  , logger = require('morgan')
+  , bodyParser = require('body-parser')
+  , letters = require('./helpers/letters')
+  , app = express()
+  ;
 
-var app = express();
-
-var env = process.env.NODE_ENV || 'development';
+const env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
 app.locals.ENV_DEVELOPMENT = env == 'development';
 
 // Middleware
-if (!global.testMode) app.use(logger('dev'));
+if (env === 'development') app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
 }));
 
 // Routes
-app.get('/username', function(req, res, next) {
-  letters.randomUsername(function(name) {
-    res.json({
-      reply: name
-    });
-  });
-});
-
 app.get('/', function(req, res, next) {
-  letters.randomString(function(reversed) {
-    res.json({
-      reply: reversed
-    });
+  res.json({
+    reply: letters.randomString()
   });
 });
 
@@ -60,7 +50,7 @@ app.use(function(err, req, res, next) {
 // Spin it up!
 app.set('port', process.env.PORT || 3000);
 var server = app.listen(app.get('port'), function() {
-  if (!global.testMode) console.log('Express server listening on port ' + server.address().port);
+  if (env !== 'test') console.log('Express server listening on port ' + server.address().port);
 });
 
 module.exports = server;
