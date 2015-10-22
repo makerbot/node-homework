@@ -1,3 +1,6 @@
+![Build status](https://travis-ci.org/makerbot/node-homework.svg)
+![Dependencies](https://david-dm.org/makerbot/node-homework.svg)
+
 ### Everything you need to run this
 
 ```sh
