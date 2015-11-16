@@ -1,4 +1,4 @@
-[![Build status](https://travis-ci.org/makerbot/node-homework.svg)](https://travis-ci.org/makerbot/node-homework)
+[![Build status](https://travis-ci.org/makerbot/node-homework.svg?branch=master)](https://travis-ci.org/makerbot/node-homework)
 [![Dependencies](https://david-dm.org/makerbot/node-homework.svg)](https://david-dm.org/makerbot/node-homework)
 
 ### Everything you need to run this
