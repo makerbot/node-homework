@@ -26,5 +26,5 @@ To run the server by itself, simply type `npm start`, then you can `curl http://
 
 ### Stuff we used
 * [Express](http://expressjs.com/) as the server framework
-* [Mocha](http://mochajs.org/) as the test executer
+* [Mocha](http://mochajs.org/) as the test executer!
 * [Chai](http://chaijs.com/) as the test assertion library
