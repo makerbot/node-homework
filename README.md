@@ -28,3 +28,6 @@ To run the server by itself, simply type `npm start`, then you can `curl http://
 * [Express](http://expressjs.com/) as the server framework
 * [Mocha](http://mochajs.org/) as the test runner
 * [Chai](http://chaijs.com/) as the test assertion library
+
+hit me 
+thrice
