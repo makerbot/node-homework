@@ -29,5 +29,5 @@ To run the server by itself, simply type `npm start`, then you can `curl http://
 * [Mocha](http://mochajs.org/) as the test runner
 * [Chai](http://chaijs.com/) as the test assertion library
 
-hit meee
+hit meeeee
 thrice
