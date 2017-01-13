@@ -30,4 +30,4 @@ To run the server by itself, simply type `npm start`, then you can `curl http://
 * [Chai](http://chaijs.com/) as the test assertion library
 
 Test me
- twice
+ twice!
